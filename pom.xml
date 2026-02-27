@@ -14,11 +14,23 @@
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>5.7.2</version>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.4.2</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.4.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.14</version>
+        </dependency>
     </dependencies>
+
 
     <profiles>
         <profile>
@@ -40,25 +52,6 @@
                     <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
                 </repository>
             </repositories>
-            <dependencies>
-                <dependency>
-                    <groupId>org.apache.httpcomponents</groupId>
-                    <artifactId>httpclient</artifactId>
-                    <version>4.5.14</version>
-                </dependency>
-                <dependency>
-                    <groupId>org.junit.jupiter</groupId>
-                    <artifactId>junit-jupiter-api</artifactId>
-                    <version>5.4.2</version>
-                    <scope>test</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.junit.jupiter</groupId>
-                    <artifactId>junit-jupiter-engine</artifactId>
-                    <version>5.4.2</version>
-                    <scope>test</scope>
-                </dependency>
-            </dependencies>
         </profile>
         <profile>
             <id>mavenCentral</id>
