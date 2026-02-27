@@ -6,8 +6,8 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -41,9 +41,9 @@ public class Main {
                     System.out.println("请求失败，状态码：" + statusCode);
                 }
             }
-        } catch (Exception e) {
-            // 捕获所有异常，便于调试
-            System.err.println("爬取网页时发生异常：" + e.getMessage());
+        } catch (IOException e) { // 仅捕获IO相关异常（受检异常）
+            e.printStackTrace();
+        } catch (IllegalArgumentException e) { // 捕获URL格式错误等运行时异常
             e.printStackTrace();
         }
     }
