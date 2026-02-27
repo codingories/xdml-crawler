@@ -46,6 +46,18 @@
                     <artifactId>httpclient</artifactId>
                     <version>4.5.14</version>
                 </dependency>
+                <dependency>
+                    <groupId>org.junit.jupiter</groupId>
+                    <artifactId>junit-jupiter-api</artifactId>
+                    <version>5.4.2</version>
+                    <scope>test</scope>
+                </dependency>
+                <dependency>
+                    <groupId>org.junit.jupiter</groupId>
+                    <artifactId>junit-jupiter-engine</artifactId>
+                    <version>5.4.2</version>
+                    <scope>test</scope>
+                </dependency>
             </dependencies>
         </profile>
         <profile>
@@ -111,19 +123,6 @@
                         <groupId>com.github.spotbugs</groupId>
                         <artifactId>spotbugs</artifactId>
                         <version>4.4.2</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.junit.jupiter</groupId>
-                        <artifactId>junit-jupiter-api</artifactId>
-                        <version>5.4.2</version>
-                        <scope>test</scope>
-                    </dependency>
-                    <!-- JUnit 5 运行时依赖（必须添加，否则测试无法执行） -->
-                    <dependency>
-                        <groupId>org.junit.jupiter</groupId>
-                        <artifactId>junit-jupiter-engine</artifactId>
-                        <version>5.4.2</version>
-                        <scope>test</scope>
                     </dependency>
                 </dependencies>
                 <executions>
