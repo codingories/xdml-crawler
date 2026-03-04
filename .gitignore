@@ -28,3 +28,5 @@ replay_pid*
 
 # 忽略Maven编译生成的目标目录
 target/
+
+*.db
